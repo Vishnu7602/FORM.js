@@ -39,6 +39,7 @@ export default function StudentsPage() {
     }
     return accumulator;
   }, []);
+  ageData.sort((a, b) => a.age - b.age);
 
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
