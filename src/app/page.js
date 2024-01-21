@@ -1,6 +1,7 @@
 // pages/index.js
 "use client"
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -10,6 +11,7 @@ export default function Home() {
     college: '',
   });
 
+  const router=useRouter();
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -45,6 +47,7 @@ export default function Home() {
     } catch (error) {
       console.error('Error submitting form:', error);
     }
+    router.push('/result');
   };
 
   return (
