@@ -34,7 +34,6 @@ export default function Home() {
 
       if (response.ok) {
         console.log('Form submitted successfully');
-        // Optionally, you can reset the form after submission
         setFormData({
           name: '',
           age: '',

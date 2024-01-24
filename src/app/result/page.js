@@ -18,7 +18,6 @@ export default function StudentsPage() {
         setStudents(data);
       } catch (error) {
         console.error('Error fetching data:', error.message);
-        // Handle the error or display an error message to the user
       }
     }
 
@@ -45,6 +44,7 @@ export default function StudentsPage() {
 
   return (
     <div className="flex flex-col items-center justify-center space-y-8 p-8">
+      <h1 className="text-2xl font-bold mb-4">Response sheet</h1>
       {students.length > 0 ? (
         <>
           <div className="bg-white shadow-xl rounded-lg p-4">
@@ -74,7 +74,7 @@ export default function StudentsPage() {
               height={300}
               data={ageData}
               margin={{
-                top: 5, right: 30, left: 20, bottom: 50, // Increased bottom margin to accommodate x-axis labels
+                top: 5, right: 30, left: 20, bottom: 50,
               }}
             >
               <CartesianGrid strokeDasharray="3 3" />
