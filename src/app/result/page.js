@@ -25,9 +25,10 @@ export default function StudentsPage() {
   }, []);
 
   const genderData = [
-    { name: 'Male', value: students.filter(student => student.gender === 'Male').length },
-    { name: 'Female', value: students.filter(student => student.gender === 'Female').length },
+    { name: 'Male', value: students.filter(student => student.gender === 'male').length },
+    { name: 'Female', value: students.filter(student => student.gender === 'female').length },
   ];
+  console.log('Gender Data:', genderData);
 
   const ageData = students.reduce((accumulator, student) => {
     const existingEntry = accumulator.find(entry => entry.age === student.age);
